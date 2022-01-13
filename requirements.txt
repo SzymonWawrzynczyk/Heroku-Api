@@ -1,2 +1,2 @@
-# Flask Framework
-Flask==1.0.2
+fastapi==0.71.0
+uvicorn==0.11.2
