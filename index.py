@@ -1,13 +1,8 @@
-import flask
-import os
-from flask import send_from_directory
+from fastapi import FastAPI
 
-app = flask.Flask(__name__)
+app = FastAPI()
 
-@app.route('/')
-@app.route('/home')
-def home():
-    return "Hello World"
 
-if __name__ == "__main__":
-    app.run()
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
